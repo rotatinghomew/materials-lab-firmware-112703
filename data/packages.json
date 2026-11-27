@@ -1,0 +1,16 @@
+[
+  {
+    "id": "IMG-9B",
+    "vendor": "vnd-4",
+    "version": "2.1.5",
+    "basename": "controller.bin",
+    "artifact": "packages/IMG-9B.txt"
+  },
+  {
+    "id": "IMG-9C",
+    "vendor": "vnd-4",
+    "version": "2.1.5",
+    "basename": "controller.bin",
+    "artifact": "packages/IMG-9C.txt"
+  }
+]

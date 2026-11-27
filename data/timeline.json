@@ -1,0 +1,87 @@
+[
+  {
+    "at": 10,
+    "kind": "提交",
+    "actor": "acct-a",
+    "facts": {
+      "image": "IMG-9B"
+    }
+  },
+  {
+    "at": 16,
+    "kind": "批准",
+    "actor": "F-12",
+    "facts": {
+      "image": "IMG-9B",
+      "group": "G1"
+    }
+  },
+  {
+    "at": 30,
+    "kind": "安装接受",
+    "actor": "N11",
+    "facts": {
+      "image": "IMG-9B",
+      "actor": "F-31"
+    }
+  },
+  {
+    "at": 31,
+    "kind": "安装接受",
+    "actor": "N12",
+    "facts": {
+      "image": "IMG-9B",
+      "actor": "F-31"
+    }
+  },
+  {
+    "at": 34,
+    "kind": "开始",
+    "actor": "N11",
+    "facts": {
+      "image": "IMG-9B"
+    }
+  },
+  {
+    "at": 37,
+    "kind": "节点暂停",
+    "actor": "F-12",
+    "facts": {
+      "node": "N12",
+      "image": "IMG-9B"
+    }
+  },
+  {
+    "at": 39,
+    "kind": "发布另一份",
+    "actor": "acct-a",
+    "facts": {
+      "image": "IMG-9C"
+    }
+  },
+  {
+    "at": 45,
+    "kind": "岗位调离",
+    "actor": "facility",
+    "facts": {
+      "subject": "F-12"
+    }
+  },
+  {
+    "at": 52,
+    "kind": "设备回报",
+    "actor": "N11",
+    "facts": {
+      "image": "IMG-9B",
+      "result": "finish"
+    }
+  },
+  {
+    "at": 71,
+    "kind": "信任冻结",
+    "actor": "registry",
+    "facts": {
+      "authority": "vendor"
+    }
+  }
+]

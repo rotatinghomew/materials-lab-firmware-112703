@@ -1,0 +1,34 @@
+[
+  {
+    "authority": "vendor",
+    "subject": "acct-a",
+    "person": "P8",
+    "roles": [
+      "发布"
+    ]
+  },
+  {
+    "authority": "facility",
+    "subject": "F-88",
+    "person": "P8",
+    "roles": [
+      "审批"
+    ]
+  },
+  {
+    "authority": "facility",
+    "subject": "F-12",
+    "person": "P12",
+    "roles": [
+      "审批"
+    ]
+  },
+  {
+    "authority": "facility",
+    "subject": "F-31",
+    "person": "P31",
+    "roles": [
+      "安装"
+    ]
+  }
+]

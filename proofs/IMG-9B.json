@@ -1,0 +1,10 @@
+{
+  "id": "IMG-9B",
+  "vendor": "vnd-4",
+  "version": "2.1.5",
+  "basename": "controller.bin",
+  "artifact": "packages/IMG-9B.txt",
+  "subject": "acct-a",
+  "sha256": "d220737fa2804e76366db61cb38f55a456ff2832c8010c47d92b78d36f3b9f75",
+  "public_key": "vnd-4.pub"
+}
