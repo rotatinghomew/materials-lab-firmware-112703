@@ -1,9 +1,13 @@
 """检查演练来源和本地回放端。"""
 import json
 import subprocess
+import sys
 import threading
 import unittest
+from pathlib import Path
 from urllib.request import urlopen
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from replay import ROOT, ReplayHandler, ThreadingHTTPServer
 

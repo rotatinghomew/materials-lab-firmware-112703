@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>固件上线双边放行工作台（合成演练）</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div>
+    <h1>固件上线双边放行工作台</h1>
+    <p class="sub">厂商来源证明 × 设施值班批准 × 节点回执 · 本地合成数据，不加载执行任何工件</p>
+  </div>
+  <div class="clock">
+    <label>回放时刻 <input id="clock" type="range" min="0" max="200" value="200"></label>
+    <strong id="clock-value">最新</strong>
+    <button id="btn-latest" type="button">回到最新</button>
+  </div>
+</header>
+
+<main>
+<section class="panel">
+  <h2>① 工艺负责人视图 · 分设备可执行状态</h2>
+  <div class="table-wrap">
+    <table id="case-table">
+      <thead><tr>
+        <th>节点</th><th>设备组</th><th>包号</th><th>版本/文件名</th><th>摘要(sha256 前16位)</th>
+        <th>阶段</th><th>可执行状态</th><th>失效依据</th><th>操作</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="legend">
+    状态色：<span class="dot ok"></span>可执行/进行中
+    <span class="dot wait"></span>等待窗口/计划
+    <span class="dot hold"></span>暂停/挂起
+    <span class="dot bad"></span>依据失效/不可执行
+    <span class="dot done"></span>完成/退回/核销
+  </p>
+</section>
+
+<div class="two-col">
+<section class="panel">
+  <h2>② 合规逐台复查</h2>
+  <div class="row">
+    <select id="pick-node"></select>
+    <select id="pick-image"></select>
+    <button id="btn-pick" type="button">复查该链</button>
+  </div>
+  <div id="case-detail"><p class="muted">选择节点与包号后展示身份、失效依据与处置。</p></div>
+</section>
+
+<section class="panel">
+  <h2>③ 办理台（写入工作台日志）</h2>
+  <form id="apply-form">
+    <div class="row">
+      <label>动作
+        <select name="kind" id="f-kind"></select>
+      </label>
+      <label>办理账号 <input name="actor" id="f-actor" placeholder="如 F-12 / F-31" required></label>
+      <label>时刻(可选) <input name="at" id="f-at" type="number" placeholder="留空=时钟+1"></label>
+    </div>
+    <div class="row" id="f-facts"></div>
+    <button type="submit">提交办理</button>
+  </form>
+  <pre id="apply-result" class="result muted">办理结果与拒绝原因显示在这里。</pre>
+</section>
+</div>
+
+<section class="panel">
+  <h2>④ 合并事件流（来源事实只读 + 工作台追加）</h2>
+  <div class="table-wrap tall">
+    <table id="event-table">
+      <thead><tr><th>序</th><th>时刻</th><th>来源</th><th>事件</th><th>主体</th><th>事实</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  厂商身份仅证明来源与所签字节；部署授权由当前值班组按设备、内容摘要、设备状态作出。
+  同版本号不同字节的包，批准互不挪用。
+</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
